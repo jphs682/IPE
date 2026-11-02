@@ -3,7 +3,7 @@ public class Estudante extends Usuario{
     private String curso;
 
 
-    public Professor(String matricula, String curso, String nome, String email, String senha){
+    public Estudante(String matricula, String curso, String nome, String email, String senha){
         super(nome, email, senha);
         this.matricula = matricula;
         this.curso = curso;
