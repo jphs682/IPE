@@ -213,6 +213,73 @@ IPE/
 └── .gitignore
 ```
 
+## 🤝 Como contribuir com o projeto
+
+O desenvolvimento pode ser dividido entre os integrantes do grupo. Para evitar que alterações de uma pessoa sobrescrevam o trabalho de outra, cada integrante deve trabalhar em uma **branch própria** e enviar suas mudanças por meio de um **Pull Request (PR)**. A branch `main` deve receber apenas alterações revisadas e aprovadas.
+
+### Fluxo de trabalho recomendado
+
+1. **Atualize sua cópia do projeto** antes de começar. Se ainda não tiver o repositório no computador, clone-o:
+
+   ```bash
+   git clone https://github.com/jphs682/IPE.git
+   cd IPE
+   ```
+
+   Se o repositório já estiver clonado, entre na pasta e atualize a branch principal:
+
+   ```bash
+   git switch main
+   git pull origin main
+   ```
+
+2. **Crie uma branch para sua tarefa**, usando um nome que identifique o que será feito:
+
+   ```bash
+   git switch -c correcao-nome-da-classe
+   ```
+
+   Por exemplo: `correcao-professor`, `implementacao-monitoria` ou `documentacao-regras`.
+
+3. **Faça as alterações somente nos arquivos da sua tarefa.** Antes de editar, confira a versão atual que está na `main`. Não use cópias antigas das classes nem substitua arquivos sem verificar o trabalho que já foi integrado.
+
+4. **Revise e registre suas alterações:**
+
+   ```bash
+   git status
+   git add NomeDaClasse.java
+   git commit -m "Descreve a alteração realizada"
+   ```
+
+   Substitua `NomeDaClasse.java` pelo arquivo que você modificou. Se a tarefa envolver mais de um arquivo, adicione apenas os arquivos relacionados.
+
+5. **Envie sua branch para o GitHub:**
+
+   ```bash
+   git push -u origin correcao-nome-da-classe
+   ```
+
+6. **Abra um Pull Request:** no GitHub, acesse o repositório e selecione a opção para criar um Pull Request a partir da branch enviada. Confira se a branch de destino (*base*) é `main` e se a branch de origem (*compare*) é a sua branch. Descreva o que foi alterado e, se possível, quais testes ou verificações foram realizados.
+
+7. **Aguarde a revisão.** Outro integrante pode revisar o código, apontar ajustes ou solicitar mudanças. Se houver solicitações, faça as correções na mesma branch e envie novos commits. Eles serão incluídos no Pull Request.
+
+8. **Integre à `main) somente após a aprovação.** Depois da revisão e das verificações, um responsável pelo repositório poderá concluir o merge do Pull Request. Após a integração, todos devem atualizar suas cópias locais com `git switch main` e `git pull origin main`.
+
+### Exemplo de divisão entre integrantes
+
+A divisão deve seguir as tarefas combinadas pelo grupo e o estado atual do projeto. Uma pessoa pode ficar responsável por revisar uma classe, enquanto outra implementa uma funcionalidade ou atualiza a documentação. Evitem que duas pessoas editem simultaneamente o mesmo trecho sem combinar previamente.
+
+### Cuidados importantes
+
+- Não façam alterações diretamente na branch `main`.
+- Cada tarefa deve ter sua própria branch e seu próprio Pull Request.
+- Sempre atualizem a `main` antes de iniciar uma nova tarefa.
+- Não enviem arquivos compilados (`.class`), senhas, tokens ou outros dados privados.
+- Antes do merge, revisem as alterações e verifiquem se o projeto continua consistente.
+- Se aparecer um conflito, não apaguem mudanças para resolvê-lo às pressas: comparem as versões e combinem a solução com os integrantes envolvidos.
+
+> **Importante:** as classes que já estão na `main` devem ser tratadas como a versão de referência. Se a tarefa for corrigir ou melhorar uma dessas classes, comecem pela versão atual do GitHub, preservando as alterações que já foram integradas.
+
 ## 🚧 Próximos passos sugeridos
 
 - [ ] Completar e revisar as classes previstas no enunciado.
