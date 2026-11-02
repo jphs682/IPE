@@ -9,7 +9,7 @@ public class Estudante extends Usuario{
         this.curso = curso;
     }
         public String getMatricula(){
-            return this.Matricula;
+            return this.matricula;
         }
         public String getCurso(){
             return this.curso;
