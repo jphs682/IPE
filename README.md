@@ -263,7 +263,7 @@ O desenvolvimento pode ser dividido entre os integrantes do grupo. Para evitar q
 
 7. **Aguarde a revisão.** Outro integrante pode revisar o código, apontar ajustes ou solicitar mudanças. Se houver solicitações, faça as correções na mesma branch e envie novos commits. Eles serão incluídos no Pull Request.
 
-8. **Integre à `main) somente após a aprovação.** Depois da revisão e das verificações, um responsável pelo repositório poderá concluir o merge do Pull Request. Após a integração, todos devem atualizar suas cópias locais com `git switch main` e `git pull origin main`.
+8. **Integre à `main` somente após a aprovação.** Depois da revisão e das verificações, um responsável pelo repositório poderá concluir o merge do Pull Request. Após a integração, todos devem atualizar suas cópias locais com `git switch main` e `git pull origin main`.
 
 ### Exemplo de divisão entre integrantes
 
