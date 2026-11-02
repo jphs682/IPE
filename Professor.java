@@ -10,11 +10,11 @@ public class Professor extends Usuario {
     }
 
     public String getSiape() {
-        return siape;
+        return this.siape;
     }
 
     public String getTitulacao() {
-        return titulacao;
+        return this.titulacao;
     }
 
     @Override
