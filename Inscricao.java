@@ -15,15 +15,15 @@ public class Inscricao {
     }
 
     public Estudante getEstudante() {
-        return estudante;
+        return this.estudante;
     }
 
     public Oportunidade getOportunidade() {
-        return oportunidade;
+        return this.oportunidade;
     }
 
     public String getSituacao() {
-        return situacao;
+        return this.situacao;
     }
 
     @Override
