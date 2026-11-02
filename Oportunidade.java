@@ -17,23 +17,23 @@ public class Oportunidade {
     }
 
     public String getTitulo() {
-        return titulo;
+        return this.titulo;
     }
 
     public int getVagas() {
-        return vagas;
+        return this.vagas;
     }
 
     public int getClassificados() {
-        return classificados;
+        return this.classificados;
     }
 
     public boolean isAberta() {
-        return aberta;
+        return this.aberta;
     }
 
     public Professor getResponsavel() {
-        return responsavel;
+        return this.responsavel;
     }
 
     public void encerrar() {
