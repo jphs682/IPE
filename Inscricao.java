@@ -1,25 +1,35 @@
+/**
+ * Representa a inscrição de um estudante em uma oportunidade.
+ */
 public class Inscricao {
+    public static final String PENDENTE = "Pendente";
+
     private Estudante estudante;
     private Oportunidade oportunidade;
     private String situacao;
 
-    public Inscricao (String estudante, String oportunidade, String situacao) {
+    public Inscricao(Estudante estudante, Oportunidade oportunidade) {
         this.estudante = estudante;
         this.oportunidade = oportunidade;
-        this.situacao = "pendente";
+        this.situacao = PENDENTE;
     }
 
-    public Estudante getEstudante(){
-        return this.estudante;
+    public Estudante getEstudante() {
+        return estudante;
     }
 
-    public Oportunidade getOportunidade(){
-        return this.oportunidade;
+    public Oportunidade getOportunidade() {
+        return oportunidade;
     }
 
     public String getSituacao() {
-        return this.situacao;
+        return situacao;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Inscrição: estudante=" + estudante.getNome()
+                + ", oportunidade=" + oportunidade.getTitulo()
+                + ", situação=" + situacao;
+    }
 }
