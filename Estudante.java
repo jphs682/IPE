@@ -10,11 +10,11 @@ public class Estudante extends Usuario {
     }
 
     public String getMatricula() {
-        return matricula;
+        return this.matricula;
     }
 
     public String getCurso() {
-        return curso;
+        return this.curso;
     }
 
     @Override
