@@ -1,8 +1,3 @@
-import java.util.Objects;
-
-/**
- * Classe base para os usuários da plataforma IPE.
- */
 public class Usuario {
     private String nome;
     private String email;
@@ -22,12 +17,8 @@ public class Usuario {
         return this.email;
     }
 
-    /**
-     * Verifica as credenciais sem expor a senha em métodos de consulta.
-     */
     public boolean autenticar(String email, String senha) {
-        return Objects.equals(this.email, email)
-                && Objects.equals(this.senha, senha);
+        return this.email.equals(email) && this.senha.equals(senha);
     }
 
     @Override
