@@ -1,5 +1,5 @@
-
 public class Oportunidade {
+
     private String titulo;
     private int vagas;
     private int classificados;
@@ -15,44 +15,50 @@ public class Oportunidade {
     }
 
     public String getTitulo() {
-        return this.titulo;
+        return titulo;
     }
 
     public int getVagas() {
-        return this.vagas;
+        return vagas;
     }
 
     public int getClassificados() {
-        return this.classificados;
+        return classificados;
     }
 
     public boolean isAberta() {
-        return this.aberta;
+        return aberta;
     }
 
     public Professor getResponsavel() {
-        return this.responsavel;
+        return responsavel;
     }
 
     public void encerrar() {
         aberta = false;
     }
 
-   
     public Inscricao inscrever(Estudante estudante) {
         if (!aberta || estudante == null) {
             return null;
         }
+
         return new Inscricao(estudante, this);
     }
 
-   
     public boolean registrarClassificacao() {
         if (classificados >= vagas) {
             return false;
         }
+
         classificados++;
         return true;
+    }
+
+    public void cancelarClassificacao() {
+        if (classificados > 0) {
+            classificados--;
+        }
     }
 
     @Override
