@@ -1,6 +1,4 @@
-/**
- * Representa uma oportunidade acadêmica oferecida por um professor.
- */
+
 public class Oportunidade {
     private String titulo;
     private int vagas;
@@ -40,10 +38,7 @@ public class Oportunidade {
         aberta = false;
     }
 
-    /**
-     * Cria uma inscrição enquanto a oportunidade estiver aberta.
-     * Retorna null quando a oportunidade estiver encerrada.
-     */
+   
     public Inscricao inscrever(Estudante estudante) {
         if (!aberta || estudante == null) {
             return null;
@@ -51,9 +46,7 @@ public class Oportunidade {
         return new Inscricao(estudante, this);
     }
 
-    /**
-     * Registra uma classificação se ainda houver vaga disponível.
-     */
+   
     public boolean registrarClassificacao() {
         if (classificados >= vagas) {
             return false;
