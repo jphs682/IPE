@@ -1,5 +1,5 @@
-Main.java
-100%
+//Main.java
+//100%
 // Projeto IPE - E1
 public class Main {
     public static void main(String[] args) {
@@ -33,4 +33,3 @@ public class Main {
         System.out.println("Nova inscricao: " + monitoria.inscrever(caio));
     }
 }
-Exibindo Projeto IPE - LPOO.pdf…
