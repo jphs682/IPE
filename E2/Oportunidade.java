@@ -1,6 +1,5 @@
-/* Representa uma oportunidade acadêmica oferecida por um professor.
- */
-public class Oportunidade {
+/** Representa uma oportunidade acadêmica oferecida por um professor. */
+public abstract class Oportunidade implements Resumivel {
 
     private String titulo;
     private int vagas;
@@ -44,7 +43,6 @@ public class Oportunidade {
         if (!aberta || estudante == null) {
             return null;
         }
-
         return new Inscricao(estudante, this);
     }
 
@@ -52,7 +50,6 @@ public class Oportunidade {
         if (classificados >= vagas) {
             return false;
         }
-
         classificados++;
         return true;
     }
@@ -61,6 +58,13 @@ public class Oportunidade {
         if (classificados > 0) {
             classificados--;
         }
+    }
+
+    public abstract int cargaHorariaSemanal();
+
+    @Override
+    public String resumo() {
+        return titulo + " - " + cargaHorariaSemanal() + " horas semanais";
     }
 
     @Override
